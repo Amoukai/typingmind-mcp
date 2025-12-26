@@ -16,6 +16,8 @@ WORKDIR /app
 # Install pnpm globally
 RUN npm install -g pnpm
 
+RUN npm install -g @cocal/google-calendar-mcp
+
 # Copy package.json and pnpm-lock.yaml first to leverage Docker cache
 COPY package.json pnpm-lock.yaml ./
 
